@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="926.0" xmlns:fx="http://javafx.com/fxml" fx:controller="reactorsimulation.chiu.ChiuViewController">
+  <children>
+    <LineChart fx:id="chiuChart" prefHeight="284.0" prefWidth="633.0" title="" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="14.0">
+      <xAxis>
+        <NumberAxis side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis forceZeroInRange="false" side="LEFT" />
+      </yAxis>
+    </LineChart>
+    <Button layoutX="193.0" layoutY="130.0" mnemonicParsing="false" onAction="#solve" text="Modelo" />
+    <Button layoutX="29.0" layoutY="164.0" mnemonicParsing="false" onAction="#experimental" text="Datos 50 °C" />
+    <LineChart fx:id="tethaChart" prefHeight="264.0" prefWidth="425.0" title="" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="38.0">
+      <xAxis>
+        <NumberAxis forceZeroInRange="false" side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis forceZeroInRange="false" side="LEFT" />
+      </yAxis>
+    </LineChart>
+    <Button layoutX="46.0" layoutY="271.0" mnemonicParsing="false" onAction="#tetha" text="parámetros" />
+    <LineChart fx:id="aChart" prefHeight="264.0" prefWidth="406.0" title="" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="21.0">
+      <xAxis>
+        <NumberAxis forceZeroInRange="false" side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis forceZeroInRange="false" side="LEFT" />
+      </yAxis>
+    </LineChart>
+    <Button layoutX="156.0" layoutY="271.0" mnemonicParsing="false" onAction="#articulo" text="Articulo" />
+    <TextField fx:id="tempTextField" layoutX="76.0" layoutY="25.0" prefWidth="78.0" />
+    <Label layoutX="29.0" layoutY="25.0" text="T[°C]:" />
+    <Button layoutX="28.0" layoutY="191.0" mnemonicParsing="false" onAction="#experimental70" text="Datos: 70 °C, 0.01548 g/mol" />
+    <TextField id="tempTextField" fx:id="i0TextField" layoutX="109.0" layoutY="55.0" prefWidth="78.0" />
+    <Label layoutX="29.0" layoutY="55.0" text="I0 [mol/L]:" />
+    <Button layoutX="28.0" layoutY="223.0" mnemonicParsing="false" onAction="#i270Experimental" text="Datos: 70 °C, 0.0258 g/mol" />
+    <TextField fx:id="lastXTextField" layoutX="109.0" layoutY="91.0" prefWidth="78.0" />
+    <Label layoutX="30.0" layoutY="94.0" text="t[min] final:" />
+    <TextField id="lastXTextField" fx:id="stepTextField" layoutX="109.0" layoutY="123.0" prefWidth="78.0" />
+    <Label layoutX="30.0" layoutY="126.0" text="paso h:" />
+  </children>
+</AnchorPane>
